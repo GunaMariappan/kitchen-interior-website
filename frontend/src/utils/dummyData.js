@@ -108,3 +108,36 @@ export const projects = [
     images: 4,
   },
 ];
+
+export const services = [
+  {
+    id: 1,
+    title: "Kitchen Interior Design",
+    description: "End-to-end kitchen design service covering layout planning, material selection, and 3D visualization tailored to your space and lifestyle.",
+  },
+  {
+    id: 2,
+    title: "Modular Kitchen",
+    description: "Space-efficient, factory-made modular units designed for durability, easy maintenance, and a clean modern look.",
+  },
+  {
+    id: 3,
+    title: "Cabinet Installation",
+    description: "Custom cabinetry design, fabrication, and precise on-site installation for both storage and aesthetic needs.",
+  },
+  {
+    id: 4,
+    title: "Countertop Work",
+    description: "Wide range of countertop materials including granite, quartz, and marble, fitted with precision and finished to perfection.",
+  },
+  {
+    id: 5,
+    title: "Lighting",
+    description: "Functional task lighting and ambient design lighting solutions to enhance both usability and mood in your kitchen.",
+  },
+  {
+    id: 6,
+    title: "Kitchen Renovation",
+    description: "Complete renovation services to modernize outdated kitchens, from demolition to final finishing touches.",
+  },
+];

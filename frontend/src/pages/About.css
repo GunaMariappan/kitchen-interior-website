@@ -1,0 +1,108 @@
+.about-hero {
+  background-color: #f5f0e8;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #2b2825;
+  margin-bottom: 10px;
+}
+
+.about-hero p {
+  color: #6b6560;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+
+.about-section {
+  margin-bottom: 48px;
+}
+
+.about-section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #2b2825;
+  margin-bottom: 14px;
+}
+
+.about-section p {
+  color: #6b6560;
+  line-height: 1.8;
+  font-size: 0.98rem;
+}
+
+.about-process {
+  margin-bottom: 48px;
+}
+
+.about-process h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #2b2825;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.process-card {
+  text-align: center;
+  padding: 20px 12px;
+}
+
+.process-number {
+  display: inline-block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #b08968;
+  margin-bottom: 8px;
+}
+
+.process-card h3 {
+  font-size: 1rem;
+  color: #2b2825;
+  margin-bottom: 8px;
+}
+
+.process-card p {
+  font-size: 0.85rem;
+  color: #6b6560;
+  line-height: 1.6;
+}
+
+.about-cta {
+  text-align: center;
+  background-color: #1a1815;
+  padding: 48px 24px;
+  border-radius: 12px;
+}
+
+.about-cta h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.about-cta .btn-primary {
+  padding: 14px 32px;
+}
+
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
