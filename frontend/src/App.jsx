@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import DesignDetails from "./pages/DesignDetails";
+import ProjectDetails from "./pages/ProjectDetails";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/designs/:slug" element={<DesignDetails />} />
+        <Route path="/projects/:slug" element={<ProjectDetails />} />
       </Routes>
       <WhatsAppButton />
       <Footer />

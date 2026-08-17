@@ -1,0 +1,88 @@
+.project-details-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.back-link {
+  display: block;
+  color: #6b6560;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  color: #b08968;
+}
+
+.project-details-container h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #2b2825;
+  margin: 10px 0 16px;
+}
+
+.project-details-meta {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #6b6560;
+}
+
+.project-details-desc {
+  color: #6b6560;
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.gallery-heading {
+  font-size: 1.2rem;
+  color: #2b2825;
+  margin-bottom: 16px;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 240px;
+  background-color: #e5e0d8;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-details-page .btn-whatsapp {
+  padding: 14px 32px;
+  display: inline-block;
+}
+
+.project-details-empty {
+  text-align: center;
+  padding: 100px 24px;
+}
+
+.project-details-empty h2 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 12px;
+}
+
+.project-details-empty p {
+  color: #6b6560;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 576px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+}

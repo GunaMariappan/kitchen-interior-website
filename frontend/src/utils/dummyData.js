@@ -65,3 +65,46 @@ export const kitchenCategories = [
   "Modern Kitchen",
   "Traditional Kitchen",
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Residential Kitchen Makeover",
+    slug: "residential-kitchen-makeover-rs-nagar",
+    location: "RS Puram, Coimbatore",
+    kitchenType: "L-Shaped Kitchen",
+    description: "Complete transformation of an outdated kitchen into a bright, modern cooking space with premium finishes and smart storage solutions.",
+    completionDate: "March 2026",
+    images: 4,
+  },
+  {
+    id: 2,
+    title: "Luxury Villa Kitchen",
+    slug: "luxury-villa-kitchen-race-course",
+    location: "Race Course, Coimbatore",
+    kitchenType: "Island Kitchen",
+    description: "A statement island kitchen designed for a luxury villa, featuring premium countertops and an open layout perfect for entertaining.",
+    completionDate: "January 2026",
+    images: 5,
+  },
+  {
+    id: 3,
+    title: "Compact Apartment Kitchen",
+    slug: "compact-apartment-kitchen-saibaba-colony",
+    location: "Saibaba Colony, Coimbatore",
+    kitchenType: "Straight Kitchen",
+    description: "Space-optimized straight kitchen design for a compact apartment, maximizing storage without compromising on style.",
+    completionDate: "November 2025",
+    images: 3,
+  },
+  {
+    id: 4,
+    title: "Modern Family Kitchen",
+    slug: "modern-family-kitchen-peelamedu",
+    location: "Peelamedu, Coimbatore",
+    kitchenType: "U-Shaped Kitchen",
+    description: "A functional U-shaped kitchen built for a large family, with ample counter space and modern modular cabinetry.",
+    completionDate: "September 2025",
+    images: 4,
+  },
+];

@@ -1,0 +1,48 @@
+.projects-hero {
+  background-color: #f5f0e8;
+  padding: 56px 24px;
+  text-align: center;
+}
+
+.projects-hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #2b2825;
+  margin-bottom: 10px;
+}
+
+.projects-hero p {
+  color: #6b6560;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.projects-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  color: #6b6560;
+}
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
