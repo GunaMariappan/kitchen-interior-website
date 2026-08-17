@@ -1,0 +1,89 @@
+.design-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.design-card:hover {
+  transform: translateY(-4px);
+}
+
+.design-card-image {
+  width: 100%;
+  height: 220px;
+  background-color: #e5e0d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.design-card-placeholder {
+  color: #a8a29c;
+  font-size: 0.85rem;
+}
+
+.design-card-body {
+  padding: 20px;
+}
+
+.design-card-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #b08968;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.design-card-title {
+  font-size: 1.1rem;
+  color: #2b2825;
+  margin: 8px 0 10px;
+}
+
+.design-card-desc {
+  font-size: 0.88rem;
+  color: #6b6560;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.design-card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-small {
+  padding: 9px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+.design-card-actions .btn-outline {
+  border: 2px solid #b08968;
+  color: #b08968;
+  transition: all 0.2s ease;
+}
+
+.design-card-actions .btn-outline:hover {
+  background-color: #b08968;
+  color: #ffffff;
+}
+
+.design-card-actions .btn-whatsapp {
+  background-color: #25d366;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.design-card-actions .btn-whatsapp:hover {
+  background-color: #1ebe5a;
+}
