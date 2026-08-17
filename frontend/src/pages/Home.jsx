@@ -1,9 +1,18 @@
+import Hero from "../components/Home/Hero";
+import WhyChooseUs from "../components/Home/WhyChooseUs";
+import ServicesPreview from "../components/Home/ServicesPreview";
+import Testimonials from "../components/Home/Testimonials";
+import CTASection from "../components/Home/CTASection";
+
 const Home = () => {
   return (
-    <div style={{ padding: "60px 24px", textAlign: "center" }}>
-      <h1>Home Page</h1>
-      <p>This is the homepage. Content coming in Phase 4.</p>
-    </div>
+    <>
+      <Hero />
+      <WhyChooseUs />
+      <ServicesPreview />
+      <Testimonials />
+      <CTASection />
+    </>
   );
 };
 

@@ -1,0 +1,44 @@
+.cta-section {
+  background-color: #1a1815;
+  padding: 64px 24px;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.cta-content p {
+  color: #d8d3cb;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-section .btn-primary {
+  padding: 14px 32px;
+}
+
+.cta-section .btn-whatsapp {
+  padding: 14px 32px;
+}
+
+@media (max-width: 576px) {
+  .cta-content h2 {
+    font-size: 1.6rem;
+  }
+}
