@@ -1,0 +1,66 @@
+.footer {
+  background-color: #1a1815;
+  color: #f5f0e8;
+  margin-top: 80px;
+}
+
+.footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 24px 32px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+}
+
+.footer-logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.footer-logo span {
+  color: #b08968;
+}
+
+.footer-desc {
+  color: #a8a29c;
+  font-size: 0.9rem;
+  max-width: 320px;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #a8a29c;
+}
+
+.footer-col ul li a {
+  color: #a8a29c;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #b08968;
+}
+
+.footer-bottom {
+  border-top: 1px solid #2b2825;
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.85rem;
+  color: #a8a29c;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
