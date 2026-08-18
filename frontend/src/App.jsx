@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import DesignDetails from "./pages/DesignDetails";
 import ProjectDetails from "./pages/ProjectDetails";
+import Login from "./pages/Admin/Login";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/designs/:slug" element={<DesignDetails />} />
         <Route path="/projects/:slug" element={<ProjectDetails />} />
+        <Route path="/admin/login" element={<Login />} />
       </Routes>
       <WhatsAppButton />
       <Footer />
