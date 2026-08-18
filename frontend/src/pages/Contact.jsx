@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { getWhatsAppLink } from "../utils/whatsapp";
+import { submitEnquiry } from "../services/api";
 import "./Contact.css";
 
 const Contact = () => {
@@ -21,20 +22,29 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const [submitError, setSubmitError] = useState(null);
+  const [submitting, setSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      // NOTE: This currently only simulates submission.
-      // In Phase 13, this will send data to the Django backend via POST /api/enquiries/
-      console.log("Form submitted:", formData);
-      setSubmitted(true);
-      setFormData({ name: "", phone: "", email: "", message: "" });
+      try {
+        setSubmitting(true);
+        setSubmitError(null);
+        await submitEnquiry(formData);
+        setSubmitted(true);
+        setFormData({ name: "", phone: "", email: "", message: "" });
+      } catch (err) {
+        console.error("Error submitting enquiry:", err);
+        setSubmitError("Something went wrong while sending your enquiry. Please try again or contact us via WhatsApp.");
+      } finally {
+        setSubmitting(false);
+      }
     }
   };
-
   const generalMessage = "Hi, I found your kitchen interior website and I am interested in your services.";
 
   return (
@@ -67,6 +77,12 @@ const Contact = () => {
             </div>
           )}
 
+          {submitError && (
+            <div className="form-error-banner">
+              {submitError}
+            </div>
+          )}
+
           <form className="contact-form" onSubmit={handleSubmit} noValidate>
             <div className="form-group">
               <label htmlFor="name">Name *</label>
@@ -91,8 +107,9 @@ const Contact = () => {
               <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange}></textarea>
               {errors.message && <span className="form-error">{errors.message}</span>}
             </div>
-
-            <button type="submit" className="btn btn-primary form-submit">Submit Enquiry</button>
+            <button type="submit" className="btn btn-primary form-submit" disabled={submitting}>
+              {submitting ? "Submitting..." : "Submit Enquiry"}
+            </button>
           </form>
         </div>
       </div>

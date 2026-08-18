@@ -1,13 +1,38 @@
+import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getWhatsAppLink } from "../utils/whatsapp";
-import { kitchenDesigns } from "../utils/dummyData";
+import { getDesignBySlug } from "../services/api";
 import "./DesignDetails.css";
 
 const DesignDetails = () => {
   const { slug } = useParams();
-  const design = kitchenDesigns.find((d) => d.slug === slug);
+  const [design, setDesign] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
-  if (!design) {
+  useEffect(() => {
+    const fetchDesign = async () => {
+      try {
+        setLoading(true);
+        setNotFound(false);
+        const response = await getDesignBySlug(slug);
+        setDesign(response.data);
+      } catch (err) {
+        console.error("Error fetching design:", err);
+        setNotFound(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchDesign();
+  }, [slug]);
+
+  if (loading) {
+    return <div className="state-message">Loading design details...</div>;
+  }
+
+  if (notFound || !design) {
     return (
       <div className="design-details-empty">
         <h2>Design Not Found</h2>
@@ -22,26 +47,32 @@ const DesignDetails = () => {
   return (
     <div className="design-details-page">
       <div className="design-details-image">
-        <span className="design-card-placeholder">Image Coming Soon</span>
+        {design.image ? (
+          <img src={design.image} alt={design.title} />
+        ) : (
+          <span className="design-card-placeholder">Image Coming Soon</span>
+        )}
       </div>
 
       <div className="design-details-container">
         <Link to="/designs" className="back-link">← Back to Designs</Link>
 
-        <span className="design-card-category">{design.category}</span>
+        <span className="design-card-category">{design.category?.name || "Kitchen"}</span>
         <h1>{design.title}</h1>
         <p className="design-details-desc">{design.description}</p>
 
         {design.price && <p className="design-details-price">{design.price}</p>}
 
-        <div className="design-details-features">
-          <h3>Features</h3>
-          <ul>
-            {design.features.map((feature) => (
-              <li key={feature}>{feature}</li>
-            ))}
-          </ul>
-        </div>
+        {design.features?.length > 0 && (
+          <div className="design-details-features">
+            <h3>Features</h3>
+            <ul>
+              {design.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <a href={getWhatsAppLink(message)} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
           Enquire About This Design

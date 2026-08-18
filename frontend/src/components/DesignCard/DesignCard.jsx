@@ -8,10 +8,14 @@ const DesignCard = ({ design }) => {
   return (
     <div className="design-card">
       <div className="design-card-image">
-        <span className="design-card-placeholder">Image Coming Soon</span>
+        {design.image ? (
+          <img src={design.image} alt={design.title} />
+        ) : (
+          <span className="design-card-placeholder">Image Coming Soon</span>
+        )}
       </div>
       <div className="design-card-body">
-        <span className="design-card-category">{design.category}</span>
+        <span className="design-card-category">{design.category?.name || "Kitchen"}</span>
         <h3 className="design-card-title">{design.title}</h3>
         <p className="design-card-desc">{design.description}</p>
         <div className="design-card-actions">
