@@ -26,6 +26,9 @@ const Login = () => {
     try {
       setLoading(true);
       const response = await loginRequest(formData.username, formData.password);
+
+      console.log("LOGIN RESPONSE:", response.data); // <-- DEBUG LINE ADDED
+
       saveAuth(response.data.token, response.data.username);
       navigate("/admin/dashboard");
     } catch (err) {
