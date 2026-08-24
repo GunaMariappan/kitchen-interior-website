@@ -14,6 +14,7 @@ import Services from "./pages/Services";
 import Contact from "./pages/Contact";
 import Login from "./pages/Admin/Login";
 import Dashboard from "./pages/Admin/Dashboard";
+import Enquiries from "./pages/Admin/Enquiries";
 
 const PublicSite = () => (
   <>
@@ -47,6 +48,7 @@ function App() {
         }
       >
         <Route path="dashboard" element={<Dashboard />} />
+        <Route path="enquiries" element={<Enquiries />} />
       </Route>
 
       <Route path="/*" element={<PublicSite />} />

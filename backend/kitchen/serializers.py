@@ -58,4 +58,13 @@ class EnquirySerializer(serializers.ModelSerializer):
             "id", "name", "phone", "email", "message",
             "design", "project", "status", "created_at",
         ]
-        read_only_fields = ["status", "created_at"]
+        read_only_fields = ["created_at"]
+
+    def get_fields(self):
+        fields = super().get_fields()
+        request = self.context.get("request")
+        # Public users (submitting an enquiry) cannot set status themselves.
+        # Only authenticated admin users (PATCH/PUT from dashboard) can update it.
+        if request and request.method == "POST":
+            fields["status"].read_only = True
+        return fields

@@ -1,0 +1,98 @@
+.admin-enquiries-page h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #2b2320;
+}
+
+.admin-loading,
+.admin-error,
+.admin-empty {
+  padding: 2rem;
+  text-align: center;
+  color: #6b6058;
+}
+
+.admin-error {
+  color: #b3261e;
+}
+
+.admin-table-wrapper {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.admin-table thead {
+  background: #f5f0ea;
+}
+
+.admin-table th {
+  text-align: left;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+  color: #6b6058;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid #e8e1d9;
+}
+
+.admin-table td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #efe8e0;
+  color: #2b2320;
+  vertical-align: middle;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr:hover {
+  background: #faf7f3;
+}
+
+.admin-table-message {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.admin-status-select {
+  padding: 0.35rem 0.6rem;
+  border-radius: 20px;
+  border: 1px solid #e0d8cd;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: #f1eee9;
+  color: #4a4038;
+}
+
+.admin-status-select:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status-new {
+  background: #e6eefc;
+  color: #2b57c9;
+}
+
+.status-contacted {
+  background: #fff2d9;
+  color: #a5680b;
+}
+
+.status-completed {
+  background: #e3f5e6;
+  color: #1e8a3c;
+}
