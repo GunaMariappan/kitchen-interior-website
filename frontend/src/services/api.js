@@ -24,11 +24,15 @@ export const updateDesign = (id, data) => api.patch(`/designs/${id}/`, data);
 export const deleteDesign = (id) => api.delete(`/designs/${id}/`);
 
 // Projects
+
 export const getProjects = () => api.get("/projects/");
 export const getProjectBySlug = (slug) => api.get(`/projects/${slug}/`);
 export const createProject = (data) => api.post("/projects/", data);
-export const updateProject = (id, data) => api.put(`/projects/${id}/`, data);
-export const deleteProject = (id) => api.delete(`/projects/${id}/`);
+export const updateProject = (slug, data) => api.patch(`/projects/${slug}/`, data);
+export const deleteProject = (slug) => api.delete(`/projects/${slug}/`);
+export const uploadProjectImages = (slug, formData) =>
+  api.post(`/projects/${slug}/upload-images/`, formData);
+export const deleteProjectImage = (imageId) => api.delete(`/project-images/${imageId}/`);
 
 // Services
 export const getServices = () => api.get("/services/");
