@@ -20,7 +20,7 @@ api.interceptors.request.use((config) => {
 export const getDesigns = () => api.get("/designs/");
 export const getDesignBySlug = (slug) => api.get(`/designs/${slug}/`);
 export const createDesign = (data) => api.post("/designs/", data);
-export const updateDesign = (id, data) => api.put(`/designs/${id}/`, data);
+export const updateDesign = (id, data) => api.patch(`/designs/${id}/`, data);
 export const deleteDesign = (id) => api.delete(`/designs/${id}/`);
 
 // Projects

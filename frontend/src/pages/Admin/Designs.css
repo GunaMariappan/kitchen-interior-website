@@ -1,0 +1,75 @@
+.admin-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.admin-page-header h1 {
+  font-size: 1.75rem;
+  color: #2b2320;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #b98a5e;
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #a37648;
+}
+
+.admin-thumb {
+  width: 64px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.admin-thumb-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1eee9;
+  color: #9c9187;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.admin-table-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.admin-action-link {
+  background: none;
+  border: none;
+  color: #b98a5e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+}
+
+.admin-action-link:hover {
+  text-decoration: underline;
+}
+
+.admin-action-delete {
+  color: #b3261e;
+}
+
+.admin-action-link:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

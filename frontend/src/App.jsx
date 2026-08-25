@@ -15,6 +15,8 @@ import Contact from "./pages/Contact";
 import Login from "./pages/Admin/Login";
 import Dashboard from "./pages/Admin/Dashboard";
 import Enquiries from "./pages/Admin/Enquiries";
+import AdminDesigns from "./pages/Admin/Designs";
+import DesignForm from "./pages/Admin/DesignForm";
 
 const PublicSite = () => (
   <>
@@ -49,6 +51,9 @@ function App() {
       >
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="enquiries" element={<Enquiries />} />
+        <Route path="designs" element={<AdminDesigns />} />
+        <Route path="designs/new" element={<DesignForm />} />
+        <Route path="designs/edit/:slug" element={<DesignForm />} />
       </Route>
 
       <Route path="/*" element={<PublicSite />} />

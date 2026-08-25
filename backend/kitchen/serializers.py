@@ -14,12 +14,15 @@ class DesignSerializer(serializers.ModelSerializer):
         queryset=Category.objects.all(), source="category", write_only=True, required=False
     )
     features = serializers.SerializerMethodField()
+    features_text = serializers.CharField(
+        source="features", write_only=True, required=False, allow_blank=True
+    )
 
     class Meta:
         model = Design
         fields = [
             "id", "title", "slug", "category", "category_id",
-            "description", "features", "price", "image",
+            "description", "features", "features_text", "price", "image",
             "created_at", "updated_at",
         ]
 
