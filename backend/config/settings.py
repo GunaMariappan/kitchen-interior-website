@@ -70,6 +70,9 @@ DATABASES = {
         'PASSWORD': config('DB_PASSWORD'),
         'HOST': config('DB_HOST'),
         'PORT': config('DB_PORT'),
+        'OPTIONS': {
+            'ssl': {'ssl-mode': 'REQUIRED'},
+        } if config('DB_SSL_REQUIRED', default=False, cast=bool) else {},
     }
 }
 
