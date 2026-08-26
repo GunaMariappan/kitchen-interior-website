@@ -109,6 +109,10 @@ STORAGES = {
     },
 }
 
+# Backward-compatibility: some packages (django-cloudinary-storage) still
+# look for the old-style STATICFILES_STORAGE setting.
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
 MEDIA_URL = "/media/"
 
 REST_FRAMEWORK = {
