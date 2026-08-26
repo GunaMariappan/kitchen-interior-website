@@ -110,6 +110,10 @@ STORAGES = {
     },
 }
 
+# django-cloudinary-storage's collectstatic override checks this old-style
+# setting even on modern Django; keep it in sync with STORAGES["staticfiles"].
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
 MEDIA_URL = "/media/"
 
 REST_FRAMEWORK = {
