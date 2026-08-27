@@ -1,5 +1,5 @@
 import { getWhatsAppLink } from "../../utils/whatsapp";
-import "./WhatsAppButton.css";
+import "./WhatsappButton.css";
 
 const WhatsAppButton = () => {
   const message =
