@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import WhatsAppButton from "./components/WhatsAppButton/WhatsAppButton";
+import WhatsAppButton from "./components/WhatsappButton/WhatsappButton";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import AdminLayout from "./layouts/AdminLayout";
 import Home from "./pages/Home";
